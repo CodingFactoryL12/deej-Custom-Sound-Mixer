@@ -1,0 +1,8 @@
+Buttons von links nach rechts: 2-9
+
+LED: 10
+Hinten Rechts: 11
+Hinten Mitte: 12
+Hinten Links: 13
+
+Slider von links nach rechts: A0-A7
