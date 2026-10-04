@@ -18,7 +18,7 @@ class Slider {
   }
 
   int read() {
-    return button.state == MUTED || button.state == PANIC ? 0 : analogRead(pin);
+    return button.state == MUTED || button.state == PANIC ? 1023 : analogRead(pin);
   }
 };
 

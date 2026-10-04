@@ -5,20 +5,20 @@
 #include "Config.h"
 
 #define NUM_LEDS      11
-#define LED_PIN       13
+#define LED_PIN       10
 
 CRGB leds[NUM_LEDS];
 
 #define NUM_SLIDERS 8
 
-// Top Utility Buttons (D10, D11, D12)
-#define OUTPUT_SELECTION_BUTTON_PIN 10
+// Top Utility Buttons
+#define OUTPUT_SELECTION_BUTTON_PIN 13
 #define OUTPUT_SELECTION_BUTTON_LED_INDEX 8
 
-#define PROFILE_BUTTON_PIN 11
+#define PROFILE_BUTTON_PIN 12
 #define PROFILE_BUTTON_LED_INDEX 9
 
-#define PANIC_BUTTON_PIN 12
+#define PANIC_BUTTON_PIN 11
 #define PANIC_BUTTON_LED_INDEX 10
 
 Slider sliders[NUM_SLIDERS] = {
@@ -55,7 +55,7 @@ void loop() {
 
   FastLED.show();
 
-  /* // --- 3. READ SLIDERS & BUILD DEEJ SERIAL STREAM ---
+  // --- 3. READ SLIDERS & BUILD DEEJ SERIAL STREAM ---
   for (int i = 0; i < NUM_SLIDERS; i++) {
     Serial.print(sliders[i].read());
 
@@ -64,5 +64,5 @@ void loop() {
     }
   }
 
-  Serial.println(); */
+  Serial.println();
 }

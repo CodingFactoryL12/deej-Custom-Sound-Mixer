@@ -4,7 +4,7 @@
 #include "ButtonStates.h"
 
 #define DEFAULT_OUTPUT OutputSelectionButtonState::HEADSET
-#define BAUD_RATE 9600
+#define BAUD_RATE 115200
 
 #define BRIGHTNESS    200      // Range: 0 (off) to 255 (full bright)
 #define LED_TYPE      WS2812B

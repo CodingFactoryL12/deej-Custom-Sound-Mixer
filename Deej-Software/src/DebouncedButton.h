@@ -61,15 +61,11 @@ class DebouncedSliderButton : public DebouncedButton {
 
   void update(bool isPanicActive) {
     if(justPressed()) {
-      Serial.print("Button pressed. Old State: ");
-      Serial.print(state);
       switch(state) {
         case UNMUTED: state = MUTED; break;
         case MUTED: state = UNMUTED; break;
         default: break;
       }
-      Serial.print(", new state: ");
-      Serial.print(state);
     }
 
     if(isPanicActive) {
@@ -77,9 +73,6 @@ class DebouncedSliderButton : public DebouncedButton {
     } else if(state == PANIC) {
       state = UNMUTED;
     }
-
-    Serial.print(", state after panic check: ");
-    Serial.println(state);
 
     led.updateColor(state);
   }
