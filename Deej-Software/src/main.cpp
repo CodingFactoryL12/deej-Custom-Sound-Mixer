@@ -3,6 +3,7 @@
 #include "DebouncedButton.h"
 #include "Slider.h"
 #include "Config.h"
+#include "ButtonStates.h"
 
 #define NUM_LEDS      11
 #define LED_PIN       10
@@ -65,4 +66,10 @@ void loop() {
   }
 
   Serial.println();
+
+  if(outputSelectionButton.state == OutputSelectionButtonState::SPEAKER) {
+    Serial.println("WORKS 1");
+  } else {
+    Serial.println("WORKS 2");
+  }
 }
