@@ -3,6 +3,7 @@
 
 #include "DebouncedButton.h"
 #include "ButtonStates.h"
+#include "Arduino.h"
 
 class Slider {
   DebouncedSliderButton button;
@@ -18,7 +19,7 @@ class Slider {
   }
 
   int read() {
-    return button.state == MUTED || button.state == PANIC ? 1023 : analogRead(pin);
+    return button.state == MUTED || button.state == PANIC ? 1023 : map(analogRead(pin), 0, 700, 0, 1023);
   }
 };
 
